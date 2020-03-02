@@ -8,7 +8,7 @@
     
     <h4>Root</h4>
     <div class="doc">
-        <p><%= api_root_url(:protocol => 'https') %></p>
+        <p><%= api_root_url(:protocol => 'http') %></p>
     </div>
     
     <br /> 
@@ -27,7 +27,7 @@
     <br /><p>jQuery Example (<a href="http://jsfiddle.net/FT2Lq/" target="_blank">run in JSFiddle</a>)</p><br />
     <div class="doc">
         <pre>
-$.get("<%= api_bins_url(:protocol => 'https') %>/:id", function(data, textStatus, jqXHR) {
+$.get("<%= api_bins_url(:protocol => 'http') %>/:id", function(data, textStatus, jqXHR) {
 
 });</pre>
     </div>
@@ -43,13 +43,13 @@ $.get("<%= api_bins_url(:protocol => 'https') %>/:id", function(data, textStatus
     </div>
     <br /><p>Server response:</p><br />
     <div class="doc">
-        <p>201 Created - {"uri":"<%= api_bins_url(:protocol => 'https')%>/:id"}</p>
+        <p>201 Created - {"uri":"<%= api_bins_url(:protocol => 'http')%>/:id"}</p>
     </div>
     <br /><p>jQuery Example (<a href="http://jsfiddle.net/3ryPf/" target="_blank">run in JSFiddle</a>)</p><br />
     <div class="doc">
         <pre>
 $.ajax({
-    url:"<%= api_bins_url(:protocol => 'https') %>",
+    url:"<%= api_bins_url(:protocol => 'http') %>",
     type:"POST",
     data:'{"key":"value"}',
     contentType:"application/json; charset=utf-8",
@@ -77,7 +77,7 @@ $.ajax({
     <div class="doc">
         <pre>
 $.ajax({
-    url:"<%= api_bins_url(:protocol => 'https') %>/:id",
+    url:"<%= api_bins_url(:protocol => 'http') %>/:id",
     type:"PUT",
     data:'{"key_updated":"value_updated"}',
     contentType:"application/json; charset=utf-8",
