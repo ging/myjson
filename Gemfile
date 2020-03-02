@@ -43,6 +43,8 @@ group :development do
   gem 'capistrano'
   gem 'capistrano-rails'
   gem 'capistrano-rvm'
+  gem 'capistrano-bundler'
+  gem 'capistrano-passenger', '>= 0.1.1'
 end
 # JSON parsing lib: https://github.com/brianmario/yajl-ruby
 gem 'yajl-ruby', '>= 1.3', :require => "yajl"
