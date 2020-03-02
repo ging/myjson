@@ -64,12 +64,3 @@ namespace :deploy do
   end
 
 end
-
-namespace :passenger do
-  desc "Restart Application"  
-  task :restart do  
-    execute :touch, release_path.join('tmp/restart.txt')
-  end
-end
-
-after :deploy, "passenger:restart"
