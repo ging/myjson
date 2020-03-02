@@ -3,14 +3,20 @@ lock '>=3.2.0'
 
 set :default_stage, "staging"
 set :application, 'myjson'
-set :repo_url, 'git@github.com:lramoth/myjson.git'
+set :repo_url, 'git@github.com:ging/myjson.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, '/var/www/myjson'
+set :deploy_to, "/u/apps/myjson"
 
+set :pty, true
+set :ssh_options, {
+  forward_agent: true,
+  auth_methods: %w[publickey],
+  keys: %w[/home/slp/Proyectos/myjson/myjson.pem]
+}
 # Default value for :scm is :git
 # set :scm, :git
 

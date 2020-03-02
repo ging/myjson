@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # defaults to json, doesn't include /api/ in path
   # and restricted to the api subdomain
   # example: http://api.myjson.com/objects/:id
-  namespace :api, :path => "", :constraints => {:subdomain => "api"} do
+  namespace :api, :path => "api"  do
     # http://api.myjson.com/bins, always returns json, and only allows the following actions, allow OPTIONS request
     resources :bins, :defaults => {:format => :json}, :only => [:index, :create, :show, :update, :destroy]
     # http://api.myjson.com

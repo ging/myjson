@@ -4,9 +4,9 @@
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
 # Don't declare `role :all`, it's a meta role
-role :app, %w{root@myjson.com}
-role :web, %w{root@myjson.com}
-role :db,  %w{root@myjson.com}
+role :app, %w{ubuntu@138.4.22.160}
+role :web, %w{ubuntu@138.4.22.160}
+role :db,  %w{ubuntu@138.4.22.160}
 
 # Extended Server Syntax
 # ======================
@@ -14,7 +14,7 @@ role :db,  %w{root@myjson.com}
 # definition into the server list. The second argument
 # something that quacks like a hash can be used to set
 # extended properties on the server.
-server 'myjson.com', user: 'root', roles: %w{web app}, my_property: :my_value
+server '138.4.22.160', user: 'ubuntu', roles: %w{web app}, my_property: :my_value
 
 # you can set custom ssh options
 # it's possible to pass any option but you need to keep in mind that net/ssh understand limited list of options
