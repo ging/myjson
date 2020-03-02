@@ -68,7 +68,7 @@ end
 namespace :passenger do
   desc "Restart Application"  
   task :restart do  
-    run "touch #{current_path}/tmp/restart.txt"  
+    execute :touch, release_path.join('tmp/restart.txt')
   end
 end
 
