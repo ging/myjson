@@ -10,7 +10,8 @@ set :repo_url, 'git@github.com:ging/myjson.git'
 
 # Default deploy_to directory is /var/www/my_app
 set :deploy_to, "/var/www/myjson"
-
+set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets')
+append :linked_files, 'config/database.yml', 'config/secrets.yml', 'vendor/certs/cert.pem', 'vendor/certs/key.pem'
 set :pty, true
 set :ssh_options, {
   forward_agent: true,
