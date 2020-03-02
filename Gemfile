@@ -45,7 +45,7 @@ group :development do
   gem 'capistrano-rvm'
 end
 # JSON parsing lib: https://github.com/brianmario/yajl-ruby
-gem 'yajl-ruby', :require => "yajl"
+gem 'yajl-ruby', :require => "yajl", '>= 1.3'
 
 # Dalli is a high performance pure Ruby client for accessing memcached servers.
 gem 'dalli'
