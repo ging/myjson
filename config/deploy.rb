@@ -62,5 +62,12 @@ namespace :deploy do
       # end
     end
   end
+  namespace :passenger do
+    desc "Restart Application"  
+    task :restart do  
+      run "touch #{current_path}/tmp/restart.txt"  
+    end
+  end
 
+  after :deploy, "passenger:restart"
 end
