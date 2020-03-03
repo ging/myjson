@@ -5,7 +5,7 @@ class HomeController < ApplicationController
   def index
     @bins_count = Rails.cache.read("bins_count");
     if (!@bins_count) 
-        @bins_count = Bin.count + 9999
+        @bins_count = Bin.count
         Rails.cache.write("bins_count", @bins_count)
     end
   end
